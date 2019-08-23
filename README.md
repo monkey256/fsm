@@ -93,10 +93,6 @@ public:
         };
 
         fsm::State* stateDead = new fsm::State(state_dead);
-        stateDead->exitEvent = [this]()
-        {
-            currentHp_ = maxHp_;
-        };
         stateDead->updateEvent = [this](int)
         {
             std::cout << "state dead" << std::endl;
